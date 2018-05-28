@@ -86,7 +86,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Utility\MockUtility.cs" />
+    <Compile Include="Utility\Extensions.cs" />
     <Compile Include="Utility\Async\TestDbAsyncEnumerator.cs" />
     <Compile Include="Utility\Async\TestDbAsyncEnumerable.cs" />
     <Compile Include="Utility\Async\TestDbAsyncQueryProvider.cs" />

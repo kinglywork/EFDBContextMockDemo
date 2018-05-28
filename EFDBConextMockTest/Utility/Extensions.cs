@@ -1,27 +1,45 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using EFDBContextMockTest.Utility.Async;
 using Moq;
+using Moq.Language;
+using Moq.Language.Flow;
 
 namespace EFDBContextMockTest.Utility
 {
-    public class MockUtility
+    public static class Extensions
     {
-        public static Mock<DbSet<TEntity>> GenerateMockSet<TEntity>(IQueryable<TEntity> data) where TEntity : class
+        public static IReturnsResult<TMock> ReturnDbSet<TMock, TResult, TEntity>(
+            this IReturns<TMock, TResult> fluent,
+            IList<TEntity> sourceList)
+            where TMock : class
+            where TEntity : class
         {
-            var mockSet = new Mock<DbSet<TEntity>>();
+            var data = sourceList.AsQueryable();
+
+            var mockSet = new Mock<IDbSet<TEntity>>();
             mockSet.As<IQueryable<TEntity>>().Setup(m => m.Provider).Returns(data.Provider);
             mockSet.As<IQueryable<TEntity>>().Setup(m => m.Expression).Returns(data.Expression);
             mockSet.As<IQueryable<TEntity>>().Setup(m => m.ElementType).Returns(data.ElementType);
             mockSet.As<IQueryable<TEntity>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator);
-            return mockSet;
+
+            return fluent.Returns((TResult) mockSet.Object);
         }
 
-        public static Mock<DbSet<TEntity>> GenerateAsyncMockSet<TEntity>(IQueryable<TEntity> data)
+        public static IReturnsResult<TMock> ReturnDbSetAsync<TMock, TResult, TEntity>(
+            this IReturns<TMock, TResult> fluent,
+            IList<TEntity> sourceList)
+            where TMock : class
             where TEntity : class
         {
-            var mockSet = new Mock<DbSet<TEntity>>();
+            var data = sourceList.AsQueryable();
+
+            var mockSet = new Mock<IDbSet<TEntity>>();
             mockSet.As<IDbAsyncEnumerable<TEntity>>()
                 .Setup(m => m.GetAsyncEnumerator())
                 .Returns(new TestDbAsyncEnumerator<TEntity>(data.GetEnumerator()));
@@ -33,7 +51,8 @@ namespace EFDBContextMockTest.Utility
             mockSet.As<IQueryable<TEntity>>().Setup(m => m.Expression).Returns(data.Expression);
             mockSet.As<IQueryable<TEntity>>().Setup(m => m.ElementType).Returns(data.ElementType);
             mockSet.As<IQueryable<TEntity>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
-            return mockSet;
+
+            return fluent.Returns((TResult) mockSet.Object);
         }
     }
 }

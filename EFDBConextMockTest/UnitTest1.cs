@@ -50,12 +50,10 @@ namespace EFDBContextMockTest
                 new Student {Name = "Ada"},
                 new Student {Name = "Zoy"},
                 new Student {Name = "Mark"},
-            }.AsQueryable();
-
-            var mockSet = MockUtility.GenerateMockSet(data);
+            };
 
             var mockContext = new Mock<SchoolContext>();
-            mockContext.Setup(c => c.Students).Returns(mockSet.Object);
+            mockContext.Setup(c => c.Students).ReturnDbSet(data);
 
             var repository = new StudentRepository(mockContext.Object);
             var service = new StudentService(repository);
@@ -78,17 +76,15 @@ namespace EFDBContextMockTest
                 new Student {Name = "Ada"},
                 new Student {Name = "Zoy"},
                 new Student {Name = "Mark"},
-            }.AsQueryable();
-
-            var mockSet = MockUtility.GenerateAsyncMockSet(data);
+            };
 
             var mockContext = new Mock<SchoolContext>();
-            mockContext.Setup(c => c.Students).Returns(mockSet.Object);
+            mockContext.Setup(c => c.Students).ReturnDbSetAsync(data);
 
             var repository = new StudentRepository(mockContext.Object);
             var service = new StudentService(repository);
 
-            var students = service.GetAllStudents();
+            var students = service.GetAllStudentsAsync().Result;
 
             Assert.AreEqual(4, students.Count);
             Assert.AreEqual("Ada", students[0].Name);
