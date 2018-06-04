@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using DomainModel_CodeFirst;
-using EFDBContextMockDemo.EFDBContextModel;
-using Infrastructure;
+using DomainModel;
 
 namespace ApplicationService
 {

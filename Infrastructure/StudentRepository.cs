@@ -2,8 +2,7 @@
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using DomainModel_CodeFirst;
-using EFDBContextMockDemo.EFDBContextModel;
+using DomainModel;
 
 namespace Infrastructure
 {

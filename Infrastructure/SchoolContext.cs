@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using EFDBContextMockDemo.EFDBContextModel;
+using DomainModel;
 
-namespace DomainModel_CodeFirst
+namespace Infrastructure
 {
     public class SchoolContext : DbContext, ISchoolContext
     {

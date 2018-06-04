@@ -1,4 +1,4 @@
-using DomainModel_CodeFirst;
+using Infrastructure;
 
 namespace EFDBContextMockDemo.Migrations
 {

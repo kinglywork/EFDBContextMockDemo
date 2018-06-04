@@ -70,9 +70,9 @@
       <Project>{0e0d1085-be80-48bd-8afb-c139892f21f5}</Project>
       <Name>ApplicationService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DomainModel_CodeFirst\DomainModel_CodeFirst.csproj">
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
       <Project>{9a33c663-4e1e-4bb6-a55c-e562d7894d0c}</Project>
-      <Name>DomainModel_CodeFirst</Name>
+      <Name>DomainModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{09390f1e-120d-428a-a262-61d3d6b2f552}</Project>

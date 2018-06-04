@@ -102,13 +102,9 @@
       <Project>{0E0D1085-BE80-48BD-8AFB-C139892F21F5}</Project>
       <Name>ApplicationService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DomainModel_CodeFirst\DomainModel_CodeFirst.csproj">
-      <Project>{9A33C663-4E1E-4BB6-A55C-E562D7894D0C}</Project>
-      <Name>DomainModel_CodeFirst</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EFDBContextMockDemo\EFDBContextMockDemo.csproj">
-      <Project>{7074D9CF-C17B-4956-B2C0-C7E9FB806319}</Project>
-      <Name>EFDBContextMockDemo</Name>
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
+      <Project>{9a33c663-4e1e-4bb6-a55c-e562d7894d0c}</Project>
+      <Name>DomainModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{09390F1E-120D-428A-A262-61D3D6B2F552}</Project>

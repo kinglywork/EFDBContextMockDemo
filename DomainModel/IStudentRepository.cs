@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using DomainModel_CodeFirst;
 
-namespace Infrastructure
+namespace DomainModel
 {
     public interface IStudentRepository
     {

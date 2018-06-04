@@ -1,4 +1,4 @@
-﻿namespace DomainModel_CodeFirst
+﻿namespace DomainModel
 {
     public class Student
     {

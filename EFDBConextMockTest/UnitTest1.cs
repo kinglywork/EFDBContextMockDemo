@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using ApplicationService;
-using DomainModel_CodeFirst;
+using DomainModel;
 using EFDBContextMockTest.Utility;
 using EFDBContextMockTest.Utility.Async;
 using Infrastructure;

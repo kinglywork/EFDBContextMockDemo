@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ApplicationService;
-using DomainModel_CodeFirst;
-using EFDBContextMockDemo.EFDBContextModel;
 using Infrastructure;
 
 namespace EFDBContextMockDemo

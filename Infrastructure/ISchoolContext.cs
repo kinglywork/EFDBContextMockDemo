@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 using System.Threading.Tasks;
-using DomainModel_CodeFirst;
+using DomainModel;
 
-namespace EFDBContextMockDemo.EFDBContextModel
+namespace Infrastructure
 {
     public interface ISchoolContext
     {

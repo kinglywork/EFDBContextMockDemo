@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using EFDBContextMockDemo.EFDBContextModel;
 
-namespace DomainModel_CodeFirst
+namespace DomainModel
 {
     public class Grade
     {
