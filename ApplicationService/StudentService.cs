@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using DomainModel_CodeFirst;
 using EFDBContextMockDemo.EFDBContextModel;
-using EFDBContextMockDemo.Infrastucture;
+using Infrastructure;
 
-namespace EFDBContextMockDemo.ApplicationService
+namespace ApplicationService
 {
     public class StudentService : IStudentService
     {

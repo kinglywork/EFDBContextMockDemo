@@ -2,9 +2,10 @@
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
+using DomainModel_CodeFirst;
 using EFDBContextMockDemo.EFDBContextModel;
 
-namespace EFDBContextMockDemo.Infrastucture
+namespace Infrastructure
 {
     public class StudentRepository : IStudentRepository
     {

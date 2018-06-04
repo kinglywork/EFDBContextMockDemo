@@ -4,9 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EFDBContextMockDemo.ApplicationService;
+using ApplicationService;
+using DomainModel_CodeFirst;
 using EFDBContextMockDemo.EFDBContextModel;
-using EFDBContextMockDemo.Infrastucture;
+using Infrastructure;
 
 namespace EFDBContextMockDemo
 {

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
-using EFDBContextMockDemo.ApplicationService;
-using EFDBContextMockDemo.EFDBContextModel;
-using EFDBContextMockDemo.Infrastucture;
+using ApplicationService;
+using DomainModel_CodeFirst;
 using EFDBContextMockTest.Utility;
 using EFDBContextMockTest.Utility.Async;
+using Infrastructure;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

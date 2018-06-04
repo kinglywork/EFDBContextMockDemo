@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using DomainModel_CodeFirst;
 using EFDBContextMockDemo.EFDBContextModel;
 
-namespace EFDBContextMockDemo.ApplicationService
+namespace ApplicationService
 {
     public interface IStudentService
     {

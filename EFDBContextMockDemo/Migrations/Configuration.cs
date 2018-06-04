@@ -1,3 +1,5 @@
+using DomainModel_CodeFirst;
+
 namespace EFDBContextMockDemo.Migrations
 {
     using System;
@@ -5,7 +7,7 @@ namespace EFDBContextMockDemo.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<EFDBContextModel.SchoolContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SchoolContext>
     {
         public Configuration()
         {
@@ -13,7 +15,7 @@ namespace EFDBContextMockDemo.Migrations
             ContextKey = "EFDBContextModel.SchoolContext";
         }
 
-        protected override void Seed(EFDBContextModel.SchoolContext context)
+        protected override void Seed(SchoolContext context)
         {
             //  This method will be called after migrating to the latest version.
 

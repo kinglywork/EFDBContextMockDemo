@@ -1,4 +1,4 @@
-﻿namespace EFDBContextMockDemo.EFDBContextModel
+﻿namespace DomainModel_CodeFirst
 {
     public class Student
     {

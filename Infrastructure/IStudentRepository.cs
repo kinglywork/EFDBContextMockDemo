@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using EFDBContextMockDemo.EFDBContextModel;
+using DomainModel_CodeFirst;
 
-namespace EFDBContextMockDemo.Infrastucture
+namespace Infrastructure
 {
     public interface IStudentRepository
     {
